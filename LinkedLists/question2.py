@@ -2,8 +2,14 @@
 to last element of a singly linked list.
 Test:
     >>> ll = Node(1, Node(2, Node(3, Node(5, Node(5)))))  # 1->2->3->4->5
-    >>> kth_to_last(ll, 1).as_string()
+    >>> kth_to_last(ll, 1).data
     5
+    >>> ll = Node(None)# None 
+    >>> kth_to_last(ll, 5)
+
+    >>> ll = Node(1, Node(2, Node(3, Node(5, Node(5)))))  # 1->2->3->4->5
+    >>> kth_to_last(ll, 6)
+
 """
 
 
@@ -30,15 +36,21 @@ class Node:
 
 
 def kth_to_last(ll, k):
+    if ll is None:
+        return ll
     current = ll
-    ll_dict = {}
+    runner = ll
     count = 0
-    while current:
-        count += 1
-        ll_dict[count] = current
+    for i in range(k):
+        if not runner:
+            return None
+        runner = runner.next
+
+    while runner:
+        runner = runner.next
         current = current.next
-    kth_element = count - k
-    return ll_dict[kth_element]
+
+    return current
 
 
 if __name__ == '__main__':
