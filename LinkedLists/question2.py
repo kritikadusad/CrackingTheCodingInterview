@@ -53,7 +53,8 @@ def kth_to_last(ll, k):
     return current
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import doctest
+
     if doctest.testmod().failed == 0:
         print("\n*** ALL TESTS PASSED. EXCELLENT!\n")

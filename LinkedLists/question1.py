@@ -42,7 +42,8 @@ def remove_duplicates(ll):
         current = current.next
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import doctest
+
     if doctest.testmod().failed == 0:
         print("\n*** ALL TESTS PASSED. EXCELLENT!\n")

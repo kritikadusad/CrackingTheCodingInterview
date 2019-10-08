@@ -42,7 +42,7 @@ class Node:
         >>> ll.return_node(2).data
         2
         """
-        current = self 
+        current = self
         if not current:
             return None
         while current:
@@ -56,10 +56,11 @@ class Node:
             return None
         node.data = node.next.data
         node.next = node.next.next
-        return self 
+        return self
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import doctest
+
     if doctest.testmod().failed == 0:
         print("\n*** ALL TESTS PASSED. EXCELLENT!\n")
