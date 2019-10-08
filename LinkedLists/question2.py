@@ -1,7 +1,7 @@
 """ Question 2.2: Implement an algorithm to find the kth 
 to last element of a singly linked list.
 Test:
-    >>> ll = Node(1, Node(2, Node(3, Node(5, Node(5)))))  # 1->2->3->4->5
+    >>> ll = Node(1, Node(2, Node(3, Node(5))))  # 1->2->3->4->5
     >>> kth_to_last(ll, 1).data
     5
     >>> ll = Node(None)# None 
