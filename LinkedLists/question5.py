@@ -15,6 +15,7 @@ Tests:
 
 """
 
+
 class Node:
     def __init__(self, data, next=None):
         self.data = data
@@ -37,6 +38,7 @@ class Node:
 
         return "->".join(ll_elements)
 
+
 def sum_lists(list1, list2):
     sum_list = Node(None)
     head = sum_list
@@ -52,13 +54,14 @@ def sum_lists(list1, list2):
         list1 = list1.next
         list2 = list2.next
         sum_list = sum_list.next
-    
+
     if list1:
         sum_list.next = list1
     if list2:
         sum_list.next = list2
 
-    return head.next 
+    return head.next
+
 
 if __name__ == "__main__":
     import doctest
